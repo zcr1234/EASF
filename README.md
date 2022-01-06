@@ -1,4 +1,24 @@
-# EASF
+########  
+EASF(Attention-based Emotion-assited Sentiment Forecasting in Dialog)  
+########  
+
+========  
+ABSTRACT  
+Dialogue is the most basic way of communication in our lives, and it has received a lot of research, 
+but there is very little research on dialogue sentiment forecasting which aims to forecast the sentimental 
+polarity of what the interlocutor is about to say. Since this sentence has not been spoken, the vector of
+ this sentence can’t be directly obtained. And according to cognitive science,
+emotions are different from the sentiment, but there is an internal connection. 
+Therefore, our paper proposes an Emotion-Assisted Sentiment Forecasting (EASF) model based on attention to
+ integrating these goals. Our model uses attention to capture the significant content of emotions and sentiment, 
+and emotion assistance can obtain the emotional change, then this change is used to assist in the analysis of the 
+polarity of the sentiment. Experimental results show that EASF significantly outperforms all baselines.  
+
+========  
+ARCHITECTURE  
+!()
+
+
 The code and data of the paper(Attention-based Emotion-assited Sentiment Forecasting in Dialog)
 In get_embedding, you need to download Google's pre-trained Chinese (BERT-Base, Chinese) model, put the downloaded Bert path into get_embedding, and then get the Embedding of the entire data set
 After getting Embedding, add the path of data and label file to get_data
