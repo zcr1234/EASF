@@ -27,7 +27,8 @@ DATA AND SETTING
 Our data set contains approximately 180,000 dialogues, and then extracts dialogues containing positive or negative sentiment. This dialogue data set contains 14,000 dialogues (including 6800 negative sentimental dialogues and 7200 positive sentimental dialogues).The sequence of positive sentimental dialogue and negative sentimental dialogue is chaotic and disorderly.  
 Then we divide the data into 10 parts, and use a ten-fold cross-validation experiment to eliminate the bias that may be caused by dividing the data.  
 The initial learning rate is 0.01, and the learning rate decays to 0.8 times the original after every 3 steps.  
-  
+We use Google's Bert to embedding words, because the file is too big to upload, so we put its download link here.(https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip)  
+
 ++++++++   
 RESULT  
 The fllowing picture is the result of ten-fold cross-validation experiment:
