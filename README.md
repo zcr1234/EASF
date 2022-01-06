@@ -16,15 +16,26 @@ polarity of the sentiment. Experimental results show that EASF significantly out
 
 ========  
 ARCHITECTURE  
-!()
+The architecture of whole mode(a) and EASF(b)  
+![](https://github.com/zcr1234/EASF/blob/main/UYSV4%5D%40~6%40S8D4%5D%40XNSG9EI.png)  
 
-
-The code and data of the paper(Attention-based Emotion-assited Sentiment Forecasting in Dialog)
-In get_embedding, you need to download Google's pre-trained Chinese (BERT-Base, Chinese) model, put the downloaded Bert path into get_embedding, and then get the Embedding of the entire data set
-After getting Embedding, add the path of data and label file to get_data
-Our data set contains approximately 180,000 dialogues, and then extracts dialogues containing positive or negative sentiment. This dialogue data set contains 14,000 dialogues (including 6800 negative sentimental dialogues and 7200 positive sentimental dialogues).
-
+========  
+  
+  
+++++++++  
+DATA AND SETTING  
+Our data set contains approximately 180,000 dialogues, and then extracts dialogues containing positive or negative sentiment. This dialogue data set contains 14,000 dialogues (including 6800 negative sentimental dialogues and 7200 positive sentimental dialogues).The sequence of positive sentimental dialogue and negative sentimental dialogue is chaotic and disorderly.  
+Then we divide the data into 10 parts, and use a ten-fold cross-validation experiment to eliminate the bias that may be caused by dividing the data.  
+The initial learning rate is 0.01, and the learning rate decays to 0.8 times the original after every 3 steps.  
+  
+++++++++   
+RESULT  
 The fllowing picture is the result of ten-fold cross-validation experiment:
-![Result of ten-fold cross-validation experiment ](https://github.com/zcr1234/EASF/blob/main/IETGLMK%60%25KIBNOL~PSMEJ%60Y.png)
+![Result of ten-fold cross-validation experiment ](https://github.com/zcr1234/EASF/blob/main/IETGLMK%60%25KIBNOL~PSMEJ%60Y.png)  
+  
+The fllowing picture is the result of experiment:  
+![](https://github.com/zcr1234/EASF/blob/main/F~8B%60DNBEN9PM2K12GXIZNE.png)  
+  
+++++++++  
 
 If you have any question, contacting us at 15942895821@163.com
