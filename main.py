@@ -81,9 +81,10 @@ def evaluate(model: nn.Module, eval_loader):
 
 
 train_data, label_data = get_data_label(data_path, label_path)
+train_data = train_data.view(-1, 4, 768).to(torch.float32)
 label_data = label_data.view(-1).to(torch.long)
 
-for train_index, test_index in kf.split(train_batch_size):
+for train_index, test_index in kf.split(train_data):
     train_data, test_data = train_data[train_index], train_data[test_index]
     train_label, test_label = label_data[train_index], label_data[test_index]
 
