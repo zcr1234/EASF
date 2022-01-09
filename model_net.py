@@ -7,14 +7,14 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else 'cpu')
 
 # 获取seq注意力的输出，用第一句到第四句
 def seq_soft_attention(attention_result, seq_weight):
-    result_seq = attention_result[0::4, :] * seq_weight[0] + attention_result[1::4, :] * seq_weight[1] \
-                 + attention_result[2::4, :] * seq_weight[2] + attention_result[3::4, :] * seq_weight[3]
+    result_seq = attention_result[:, 0, :] * seq_weight[0] + attention_result[:, 1, :] * seq_weight[1] \
+                 + attention_result[:, 2, :] * seq_weight[2] + attention_result[:, 3, :] * seq_weight[3]
     return result_seq
 
 
 # 获取pair注意力的输出,只用到第一句与第三句
 def pair_soft_attention(attention_result, pair_weight):
-    result_pair = attention_result[0::4, :] * pair_weight[0] + attention_result[2::4, :] * pair_weight[1]
+    result_pair = attention_result[:, 0, :] * pair_weight[0] + attention_result[:, 2, :] * pair_weight[1]
     return result_pair
 
 
